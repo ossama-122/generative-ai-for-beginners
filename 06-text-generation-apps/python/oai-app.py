@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 
 # load environment variables from .env file
 load_dotenv()
-
+openai_key = os.getenv("OPENAI_API_KEY","")
 # configure OpenAI service client 
-client = OpenAI()
+client = OpenAI=(openai_key)
 deployment = "gpt-3.5-turbo"
 
 # add your completion code
